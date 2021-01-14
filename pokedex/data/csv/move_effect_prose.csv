@@ -234,7 +234,7 @@ The curse effect is passed on by []{move:baton-pass}.
 This move cannot be copied by []{move:mirror-move}."
 112,9,Prevents any moves from hitting the user this turn.,"No moves will hit the user for the remainder of this turn.  If the user is last to act this turn, this move will [fail]{mechanic:fail}.
 
-If the user successfully used []{move:detect}, []{move:endure}, []{move:protect}, []{move:quick-guard}, or []{move:wide-guard} on the last turn, this move has a 50% chance to [fail]{mechanic:fail}.
+If the user successfully used []{move:detect}, []{move:endure}, []{move:protect}, []{move:quick-guard}, []{move:wide-guard}, or []{move:max-guard} on the last turn, this move has a 50% chance to [fail]{mechanic:fail}.
 
 []{move:lock-on}, []{move:mind-reader}, and []{ability:no-guard} provide a (100 – accuracy)% chance for moves to break through this move.  This does not apply to one-hit KO moves ([]{move:fissure}, []{move:guillotine}, []{move:horn-drill}, and []{move:sheer-cold}); those are always blocked by this move.
 
@@ -1120,6 +1120,37 @@ Any [regular damage]{mechanic:regular-damage} dealt to an affected Pokémon is r
 423,9,Seeds the target after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) sets []{move:leech-seed} on the target."
 424,9,Cures the entire party of major status effects after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) removes [major status effects]{mechanic:major-status-effects} from every Pokémon in the user's party."
 425,9,Hits twice in one turn, with a $effect_chance% chance to make the target flinch.,"Inflicts [regular damage]{mechanic:regular-damage}.  Hits twice in one turn, with a $effect_chance% chance to make the target [flinch]{mechanic:flinch}."
+426,9,Prevents any moves from hitting the user this turn.,"No moves will hit the user for the remainder of this turn.  If the user is last to act this turn, this move will [fail]{mechanic:fail}.
+
+If the user successfully used []{move:detect}, []{move:endure}, []{move:protect}, []{move:quick-guard}, []{move:wide-guard}, or []{move:max-guard} on the last turn, this move has a 50% chance to [fail]{mechanic:fail}.
+
+[]{move:lock-on}, []{move:mind-reader}, and []{ability:no-guard} provide a (100 – accuracy)% chance for moves to break through this move.  This does not apply to one-hit KO moves ([]{move:fissure}, []{move:guillotine}, []{move:horn-drill}, and []{move:sheer-cold}); those are always blocked by this move.
+
+[]{move:thunder} during []{move:rain-dance} and []{move:blizzard} during []{move:hail} have a 30% chance to break through this move.
+
+The following effects are not prevented by this move:
+
+* []{move:acupressure} from an ally
+* []{move:curse}'s curse effect
+* Delayed damage from []{move:doom-desire} and []{move:future-sight}; however, these moves will be prevented if they are used this turn
+* []{move:feint}, which will also end this move's protection after it hits
+* []{move:imprison}
+* []{move:perish-song}
+* []{move:shadow-force}
+* Moves that merely copy the user, such as []{move:transform} or []{move:psych-up}
+
+This move cannot be selected by []{move:assist} or []{move:metronome}.
+
+Unlike other protection moves, this move fully protects the user from Max Moves."
+427,9,Inflicts double damage if the target is Dynamaxed.,"Inflicts [regular damage]{mechanic:regular-damage}.  If the target is Dynamaxed or Gigantamaxed, this move has double power."
+428,9,Has an increased chance for a critical hit and ignores redirection.,"Inflicts [regular damage]{mechanic:regular-damage}.  User's [critical hit]{mechanic:critical-hit} rate is one level higher when using this move. Is unaffected by moves and Abbility effects that draw in moves, such as [Follow Me]{move:follow-me} and [Storm Drain]{ability:storm-drain}."
+429,9,The user eats its held berry and raises its Defense by two stages.,Can only be used if the user is holding a berry. Raises the user's [Defense]{mechanic:defense} by two [stages]{mechanic:stage} in addition to whatever effect that berry might normally have.
+430,9,Raise all of the user's stats by one stage but prevents switching.,Raises all of the user's stats one [stage]{mechanic:stage} but prevents them from [switching]{mechanic:switch} out or fleeing.
+431,9,Lowers the target's Speed by one stage and makes it weak to Fire.,Lowers the target's [Speed]{mechanic:speed} by one [stage]{mechanic:stage} and doubles the effectiveness of []{type:fire} moves used against it.
+432,9,Changes the target's type to Psychic.,"Changes the target to pure []{type:psychic}-type until it leaves the field. [Fails]{mechanic:fail} if the target is already []{type:psychic} type, has []{ability:multitype}, or is immune to powder moves through []{ability:overcoat}, []{item:safety-goggles}, or []{type:grass} typing."
+433,9,Hits twice in one turn across all non-immune targets.,Inflicts [regular damage]{mechanic:regular-damage}. "Hits twice in one turn. If targeting an opponent where there are multiple opponents, this move's first strike targets the original target and its second strike targets the other opponent. If either target would take no damage from this move, both strikes are directed at the other Pokemon instead."
+434,9,Causes all Pokemon on the field to eat their berry.,Causes all Pokemon on the field to eat their berry.
+435,9,Prevents the target from leaving battle and lowers its Defense and Special Defense at the end of each turn.,"The target cannot [switch out]{mechanic:switch-out} normally.  This effect ends when the user leaves the [field]{mechanic:field}. Lowers the target's [Defense]{mechanic:defense} and [Special Defense]{mechanic:special-defense} by one [stage]{mechanic:stage} at the end of each turn.
 10001,9,Has an increased chance for a critical hit in Hyper Mode.,Inflicts [regular damage]{mechanic:regular-damage}.  User's [critical hit]{mechanic:critical-hit} rate is one level higher when using this move while in [hyper mode]{mechanic:hyper-mode}.
 10002,9,User receives 1/2 its HP in recoil.,Inflicts [regular damage]{mechanic:regular-damage}.  User takes 1/2 of its current [HP]{mechanic:hp} in recoil.
 10003,9,Halves HP of all Pokémon on the field.  Must recharge,"Halves [HP]{mechanic:hp} of all Pokémon on the field.  User loses its next turn to ""recharge"", and cannot attack or [switch]{mechanic:switch} out during that turn."
